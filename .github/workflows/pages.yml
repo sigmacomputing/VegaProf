@@ -1,0 +1,30 @@
+name: Pages
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+
+    name: Publish GitHub Pages
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+      - name: Install Node dependencies
+        run: yarn --frozen-lockfile
+      - name: Build the packages
+        run: yarn workspace vega-editor build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: editor/dist

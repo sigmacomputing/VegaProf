@@ -1,0 +1,44 @@
+{
+  "name": "vegaprof-monorepo",
+  "version": "0.0.0",
+  "description": "Providing Vega and the Vega Editor modified for VegaProf.",
+  "keywords": [
+    "VegaProf",
+    "vega",
+    "editor"
+  ],
+  "author": "Sigma Computing",
+  "repository": "git@github.com:sigmacomputing/VegaProf.git",
+  "bugs": {
+    "url": "https://github.com/sigmacomputing/VegaProf/issues"
+  },
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "build:editor": "cd editor && yarn build",
+    "build:vega": "cd vega && yarn build",
+    "start": "cd editor && yarn start",
+    "test": "yarn workspaces run test"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "vega-datasets": "link:./packages"
+  },
+  "browserslist": [
+    "last 3 chrome versions",
+    "last 3 firefox versions",
+    "last 3 safari versions",
+    "last 3 edge versions"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": [
+    "vega/",
+    "editor/"
+  ]
+}

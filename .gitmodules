@@ -1,0 +1,6 @@
+[submodule "packages/editor"]
+	path = packages/editor
+	url = git@github.com:JunranY/editor.git
+[submodule "packages/vega"]
+	path = packages/vega
+	url = git@github.com:JunranY/vega.git

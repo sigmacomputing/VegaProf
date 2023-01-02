@@ -35,3 +35,6 @@ jobs:
 
       - name: Build vega
         run: cd vega && yarn --frozen-lockfile && yarn build
+
+      - name: Build the editor
+        run: cd editor && yarn --frozen-lockfile && yarn build

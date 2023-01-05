@@ -1,6 +1,7 @@
 # VegaProf
 
 This repository contains the source code for **VegaProf**, a performance profiler for Vega visualizations.
+To learn more about our research behind VegaProf, check out our [paper](https://arxiv.org/pdf/2212.13670.pdf).
 To see VegaProf in action, check out our [demo video](https://drive.google.com/file/d/1RblCu4f-cg2AUKqVSEMm4JtHhKg4DgDM/view?usp=sharing).
 You can also try VegaProf [online](https://sigmacomputing.github.io/VegaProf), or clone this repo and follow the [usage instructions](#usage-instructions).
 
@@ -114,3 +115,14 @@ yarn start
 ```
 
 The local web server will be accessible from [http://localhost:8080](http://localhost:8080).
+
+## Citing VegaProf
+
+If you find this work or code useful please consider citing us:
+
+    @article{yang2022vegaprof,
+      title={VegaProf: Profiling Vega Visualizations},
+      author={Yang, Junran and B{\"a}uerle, Alex and Moritz, Dominik and Demiralp, {\c{C}}a{\u{g}}atay},
+      journal={arXiv preprint arXiv:2212.13670},
+      year={2022}
+    }
